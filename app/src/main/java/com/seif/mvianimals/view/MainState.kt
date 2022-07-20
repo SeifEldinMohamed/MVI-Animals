@@ -3,8 +3,8 @@ package com.seif.mvianimals.view
 import com.seif.mvianimals.model.Animal
 
 sealed class MainState {
-    object Idle : MainIntent()
-    object Loading: MainIntent()
-    data class Animals(val animals: List<Animal>): MainIntent()
-    data class Error(val error: String): MainIntent()
+    object Idle : MainState()
+    object Loading: MainState()
+    data class Animals(val animals: List<Animal>): MainState()
+    data class Error(val error: String): MainState()
 }
